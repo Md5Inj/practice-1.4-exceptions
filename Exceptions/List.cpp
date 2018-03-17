@@ -53,6 +53,7 @@ void List::Print()
 {
 	for (int i = 0; i < this->array.size(); i++)
 	{
+		cout << i << " ";
 		this->array[i].Show();
 	}
 }
