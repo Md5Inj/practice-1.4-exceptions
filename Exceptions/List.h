@@ -1,6 +1,5 @@
 #include "Message.h"
 #include <vector>
-#include <algorithm>
 
 #pragma once
 class List

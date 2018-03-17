@@ -1,4 +1,4 @@
-﻿  Exceptions.cpp
+﻿  Message.cpp
 e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
   e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): note: аргументы командной строки:  см. предыдущее определение "_CRT_SECURE_NO_WARNINGS"
   Exceptions.vcxproj -> E:\Программирование\1.4 Обработка исключительных ситуаций\Exceptions\Debug\Exceptions.exe

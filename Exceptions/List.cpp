@@ -30,7 +30,14 @@ int List::Length()
 
 void List::Sort()
 {
-	sort(this->array.begin(), this->array.end());
+	for (int i = 0; i < array.size() - 1; i++)
+	{
+		for (int j = 0; j < array.size() - i - 1; j++)
+		{
+			if (array[j].getID() > array[j+1].getID())
+				swap(array[j], array[j + 1]);
+		}
+	}
 }
 
 void List::Replace()

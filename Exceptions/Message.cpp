@@ -4,6 +4,11 @@
 
 Message::Message()
 {
+	this->DeviceNum = 0;
+	this->ID = 0;
+	memset(this->Text, 0, sizeof(char)*20);
+	memset(this->date, 0, sizeof(char) * 10);
+	memset(this->time, 0, sizeof(char) * 10);
 }
 
 int Message::getDeviceNum()
@@ -58,11 +63,34 @@ void Message::setTime(char *time)
 
 void Message::Input()
 {
-	cout << "input device num (3 digits): "; cin >> this->DeviceNum;
-	cout << "input message ID: "; cin >> this->ID;
-	cout << "Input text of message: "; cin >> this->Text;
-	cout << "Input date in format: dd.mm.yyyy: "; cin >> this->date;
-	cout << "Input the time in format hh:mm: "; cin >> this->time;
+	int input = 0;
+	char inputText[20];
+	cout << "input device num (3 digits): ";
+	cin >> input;
+	if (input < 0) throw Except(1, "Negative digit");
+	if (input > 999) throw Except(2, "Out of range");
+	this->DeviceNum = input;
+	
+	cout << "input message ID: "; 
+	cin >> input;
+	if (input < 0) throw Except(3, "Id cant be a negative");
+	this->ID = input;
+
+	cout << "Input text of message: "; cin >> inputText;
+	if (strcmp(inputText, "") == 0) throw Except(4, "Text cant be a empty");
+	strcpy(this->Text, inputText);
+
+	cout << "Input date in format: dd.mm.yyyy: ";
+	cin >> inputText;
+	if (strcmp(inputText,"") == 0) throw Except(5, "Date cant be a empty");
+	if (strlen(inputText) != 10) throw Except(6, "Incorrect input of date");
+	strcpy(this->date, inputText);
+
+	cout << "Input the time in format hh:mm: "; cin >> inputText;
+	if (strcmp(inputText, "") == 0) throw Except(7, "Time cant be a empty");
+	if (strlen(inputText) != 5) throw Except(8, "Incorrect input of a time");
+	if (strchr(inputText, ':') == NULL) throw Except(9, "Your time does not have a :");
+	strcpy(this->time, inputText);
 }
 
 void Message::Show()
