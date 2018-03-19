@@ -1,11 +1,4 @@
-﻿  List.cpp
+﻿  Exceptions.cpp
 e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
   e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): note: аргументы командной строки:  см. предыдущее определение "_CRT_SECURE_NO_WARNINGS"
-e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\list.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
-e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\list.cpp(35): warning C4018: <: несоответствие типов со знаком и без знака
-e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\list.cpp(54): warning C4018: <: несоответствие типов со знаком и без знака
-  Exceptions.cpp
-e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
-  e:\программирование\1.4 обработка исключительных ситуаций\exceptions\exceptions\message.h(1): note: аргументы командной строки:  см. предыдущее определение "_CRT_SECURE_NO_WARNINGS"
-  Создание кода...
   Exceptions.vcxproj -> E:\Программирование\1.4 Обработка исключительных ситуаций\Exceptions\Debug\Exceptions.exe

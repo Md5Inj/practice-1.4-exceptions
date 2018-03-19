@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "List.h"
 
-
 List::List()
 {
 }
 
 List::List(int length)
 {
+	if (length < 0) throw Except(1, "Negative digit");
 	Message m;
 	for (int i = 0; i < length; i++)
 	{
@@ -44,6 +44,8 @@ void List::Replace()
 {
 	int index = 0;
 	cout << "Input index: "; cin >> index;
+	if (index < 0) throw Except(1, "Negative digit");
+	if (index > this->Length()) throw Except(2, "Out of range");
 	Message m;
 	m.Input();
 	this->array[index] = m;
@@ -60,6 +62,8 @@ void List::Print()
 
 Message List::operator[](int n)
 {
+	if (n < 0) throw Except(1, "Negative digit");
+	if (n > this->Length()) throw Except(2, "Out of range");
 	return this->array[n];
 }
 

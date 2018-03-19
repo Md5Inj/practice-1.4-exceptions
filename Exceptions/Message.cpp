@@ -68,12 +68,13 @@ void Message::Input()
 	cout << "input device num (3 digits): ";
 	cin >> input;
 	if (input < 0) throw Except(1, "Negative digit");
+	if (input < 100) throw Except(10, "Small amount of digits");
 	if (input > 999) throw Except(2, "Out of range");
 	this->DeviceNum = input;
 	
 	cout << "input message ID: "; 
 	cin >> input;
-	if (input < 0) throw Except(3, "Id cant be a negative");
+	if (input < 0) throw Except(3, "ID cant be a negative");
 	this->ID = input;
 
 	cout << "Input text of message: "; cin >> inputText;
